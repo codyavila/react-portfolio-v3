@@ -62,7 +62,7 @@ const Footer = () => {
           transition={{ type: 'spring', stiffness: 100 }}>
           <img src={images.mobile} alt='mobile' />
           <a href='tel: +1 (727)871-8709' className='p-text'>
-            (727)871-8709
+            (727) 871-8709
           </a>
         </motion.div>
       </div>

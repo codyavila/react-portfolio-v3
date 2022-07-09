@@ -24,24 +24,32 @@ const Header = () => {
     <motion.div ref={constraintRef} className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 1 }}
+        transition={{ type: 'spring' }}
         className='app__header-info'>
         <div className='app__header-badge'>
-          <div className='badge-cmp app__flex'>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className='badge-cmp app__flex'>
             <motion.span
-              animate={{ rotate: [-3, 17, -3, 17, 5, 0, 0 ,0 ,-1] }}
-              transition={{ type: 'spring',  duration: 1, yoyo: Infinity }}>
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.8 }}
+              animate={{ rotate: [-3, 17, -3, 17, 5, 0, 0, 0, -1] }}
+              transition={{ type: 'spring', duration: 1, yoyo: Infinity }}>
               👋
             </motion.span>
-            <div style={{ marginLeft: 20 }}>
+            <motion.div whileHover={{ scale: 1.05 }} style={{ marginLeft: 20 }}>
               <p className='p-text'>Hello there! My name is</p>
-              <h1 className='head-text'>Cody</h1>
-            </div>
-          </div>
-          <div className='tag-cmp app__flex'>
+              <motion.h1 className='head-text'>Cody</motion.h1>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className='tag-cmp app__flex'>
             <p className='p-text'>Fullstack Software Engineer</p>
             <p className='p-text'>UI/UX Design</p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 

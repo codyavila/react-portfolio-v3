@@ -30,20 +30,24 @@ const Skills = () => {
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
           {skills?.map((skill) => (
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8, borderRadius: '100%' }}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.1 }}
-              className='app__skills-item app-flex'
-              key={skill.name}>
-              <div
+            <div className='app__skills-item app-flex' key={skill.name}>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: '0 0 10px 3px #03152C'
+                }}
+                whileTap={{
+                  scale: 0.98,
+                  boxShadow: 'inset 0 0 6px 4px #525252'
+                }}
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ type: 'spring', stiffness: 100 }}
                 className='app__flex'
                 style={{ backgroundColor: skill.bgColor }}>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
-              </div>
+              </motion.div>
               <p className='p-text'>{skill.name}</p>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
         <motion.div className='app__skills-exp'>
@@ -83,4 +87,8 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills', 'app__whitebg')
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  'app__whitebg'
+)
