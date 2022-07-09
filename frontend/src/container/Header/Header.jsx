@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 
 import { AppWrap } from '../../wrapper'
@@ -18,9 +18,11 @@ const scaleVariants = {
   }
 }
 
+
 const Header = () => {
+  const constraintRef = useRef(null)
   return (
-    <div className='app__header app__flex'>
+    <motion.div ref={constraintRef}className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
@@ -59,12 +61,12 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'>
         {[images.react, images.node, images.sass].map((circle, index) => (
-          <div className='circle-cmp app__flex' key={`circle-${index}`}>
+          <motion.div drag dragConstraints={constraintRef}className='circle-cmp app__flex' key={`circle-${index}`}>
             <img src={circle} alt='circle' />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -31,8 +31,10 @@ const Skills = () => {
         <motion.div className='app__skills-list'>
           {skills?.map((skill) => (
             <motion.div
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8, borderRadius: '100%' }}
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
               className='app__skills-item app-flex'
               key={skill.name}>
               <div

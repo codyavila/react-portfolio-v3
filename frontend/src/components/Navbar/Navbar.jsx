@@ -10,15 +10,15 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-logo'>
+      <motion.div className='app__navbar-logo' whileHover={{ scale: 1.03, rotate: 1.2 }} transition={{ type: 'spring' }}>
         <img src={images.logo} alt='logo' />
-      </div>
+      </motion.div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className='app__flex p-text' key={`link-${item}`}>
+          <motion.li className='app__flex p-text' whileHover={{ y: -3 }} key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
-          </li>
+          </motion.li>
         ))}
       </ul>
 
