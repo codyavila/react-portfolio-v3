@@ -10,12 +10,21 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <motion.div className='app__navbar-logo' whileHover={{ scale: 1.03, rotate: 1.2 }} transition={{ type: 'spring' }}>
-        <img src={images.logo} alt='logo' />
+      <motion.div
+        className='app__navbar-logo'
+        drag
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={ 0.5 }
+        whileHover={{ scale: 1.03, rotate: 1.2 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
+        <img src={images.logo} alt='logo' draggable='false'/>
       </motion.div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <motion.li className='app__flex p-text' whileHover={{ y: -3 }} key={`link-${item}`}>
+          <motion.li
+            className='app__flex p-text'
+            whileHover={{ y: -3 }}
+            key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </motion.li>
