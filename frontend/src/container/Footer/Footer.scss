@@ -23,9 +23,9 @@
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #fef4f5;
+    background-color: #e76f51;
 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     img {
       width: 40px;
@@ -43,7 +43,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px #fef4f5;
+      box-shadow: inset 0 0 10px 2px #702a18;
     }
 
     @media screen and (max-width: 450px) {
@@ -57,7 +57,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f2f7fb;
+  background-color: #f4a261;
 }
 
 .app__footer-form {
@@ -73,7 +73,7 @@
     cursor: pointer;
     background-color: var(--primary-color);
 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     input,
     textarea {
@@ -93,7 +93,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px var(--primary-color);
+      box-shadow: inset 0 0 10px 2px #6a3e1a;
     }
   }
 
@@ -109,6 +109,12 @@
     margin: 2rem 0 0 0;
     font-family: var(--font-base);
     cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: inset 0 0 10px 2px #6a3e1a;
+    }
   }
 
   @media screen and (max-width: 768px) {

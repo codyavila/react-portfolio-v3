@@ -1,6 +1,6 @@
 #home {
   position: relative;
-  background: url('../../assets/bgIMG.png');
+  background: url('../../assets/blob-scene-haikei.svg');
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -58,23 +58,39 @@
 
   .badge-cmp,
   .tag-cmp {
+    margin-top: 17rem;
     padding: 1rem 2rem;
     border: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #003f60;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      position: absolute;
+      margin-top: 3rem;
+    }
   }
 
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;
 
+    @media screen and (max-width: 1200px) {
+      margin-top: 11rem;
+    }
+
     p {
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+      color: white;
     }
   }
   span {
@@ -104,7 +120,7 @@
     height: 100px;
     border-radius: 50%;
 
-    background: var(--white-color);
+    background: #004163;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
     img {
@@ -159,40 +175,44 @@
 }
 
 .app__header-img {
-    flex: 1;
-    height: 100%;
+  flex: 1;
+  height: 100%;
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
 
-    img {
-        width: 100%;
-        object-fit: contain;
+  img {
+    width: 100%;
+    object-fit: contain;
 
-        z-index: 1;
+    z-index: 1;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 18rem;
     }
+  }
 
-    .overlay_circle {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        width: 100%;
-        height: 90%;
-    }
+  .overlay_circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+  }
 
-    @media screen and (min-width: 2000px) {
-        max-width: 900px;
-    }
+  @media screen and (min-width: 2000px) {
+    max-width: 900px;
+  }
 
-    @media screen and (max-width: 1200px) {
-        margin: 2rem 0;
-    }
+  @media screen and (max-width: 1200px) {
+    margin: 2rem 0;
+  }
 }
 
 h1 {
-    font-size: 20px;
+  font-size: 20px;
 }
