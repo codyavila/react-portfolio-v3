@@ -26,6 +26,7 @@ const Skills = () => {
   return (
     <>
       <h2 className='head-text'>Skills & Experience</h2>
+      <p className='disclaimer-text'>*Hover over position for more details</p>
 
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
@@ -72,7 +73,7 @@ const Skills = () => {
                     <ReactTooltip
                       id={work.name}
                       effect='solid'
-                      arrowColor='#fff'
+                      arrowColor='#eae2b7'
                       className='skills-tooltip'>
                       {work.desc}
                     </ReactTooltip>
