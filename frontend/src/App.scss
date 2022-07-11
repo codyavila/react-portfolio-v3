@@ -31,8 +31,9 @@
   flex-direction: column;
   padding: 4rem 2rem;
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 900px) {
     padding: 4rem 1rem 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -85,7 +86,7 @@
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--black-color);
+  color: black;
   text-align: left;
 
   @media screen and (min-width: 2000px) {

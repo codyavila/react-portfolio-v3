@@ -6,7 +6,7 @@ const MotionWrap = (Component, classNames) =>
     return (
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-        transition={{ type: 'spring' , }}
+        transition={{ type: 'spring' }}
         className={`${classNames} app__flex`}>
         <Component />
       </motion.div>

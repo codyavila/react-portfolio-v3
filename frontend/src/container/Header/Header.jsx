@@ -32,10 +32,8 @@ const Header = () => {
             whileTap={{ scale: 0.9 }}
             className='badge-cmp app__flex'>
             <motion.span
-              whileHover={{ scale: 1.15 }}
-              whileTap={{ scale: 0.8 }}
-              animate={{ rotate: [-3, 17, -3, 17, 5, 0, 0, 0, -1] }}
-              transition={{ type: 'spring', duration: 1, yoyo: Infinity }}>
+              animate={{ rotate: [-3, 17, -3, 17, -3, 0, 0, 0, 0, 0, 0] }}
+              transition={{  duration: 1.3, yoyo: Infinity }}>
               👋
             </motion.span>
             <motion.div whileHover={{ scale: 1.05 }} style={{ marginLeft: 20 }}>

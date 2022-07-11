@@ -112,8 +112,8 @@ const Footer = () => {
         {!isFormSubmitted ? (
           <motion.button
             whileHover={{
-              scale: 0.95,
-              boxShadow: 'inset 0 0 10px 2px #6a3e1a'
+              scale: 0.98,
+              boxShadow: 'inset 0 0 7px 1px #6a3e1a'
             }}
             whileTap={{ scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 100 }}
@@ -126,7 +126,7 @@ const Footer = () => {
           <motion.button
             whileHover={{
               scale: 0.95,
-              boxShadow: 'inset 0 0 10px 2px #6a3e1a'
+              boxShadow: 'inset 0 0 6px 2px #6a3e1a'
             }}
             whileTap={{ scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 160 }}
