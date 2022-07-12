@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ReactTooltip from 'react-tooltip'
-import ExpCard from './ExpCard'
+import ExpCardYear from './ExpCardYear'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 
 import './Skills.scss'
-import ExpCardYear from './ExpCardYear'
 
 const Skills = () => {
   const [experience, setExperience] = useState([])
   const [skills, setSkills] = useState([])
-  // const [isOpen, setIsOpen] = useState([])
 
   useEffect(() => {
     const query = '*[_type == "experiences"]'
@@ -55,8 +53,7 @@ const Skills = () => {
             </div>
           ))}
         </motion.div>
-        <ExpCardYear experience={experience}>
-        </ExpCardYear>
+        <ExpCardYear experience={experience} experienceWorks={experience.works} />
       </motion.div>
     </>
   )
