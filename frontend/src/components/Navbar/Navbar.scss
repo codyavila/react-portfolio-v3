@@ -42,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: #d62828;
   list-style: none;
   
   li {
@@ -57,7 +57,7 @@
       background: transparent;
       border-radius: 50%; 
     }
-  
+    
     a {
       color: white;
       text-decoration: none;
@@ -67,20 +67,17 @@
       font-weight: 600;
       font-size: 32px;
       padding: 0 3vw;
-
       
       &:hover {
         color: #d62828;
       }
-      
     }
-    
     &:hover {
       div {
-        transition: all 0.2s ease-in-out;
-        background: var(--secondary-color);
+        background: #d62828;
       }
     }
+    
   }
   @media screen and (max-width: 1200px) {
     display: none;
@@ -94,7 +91,7 @@
   bottom: 0;
   width: 70%;
   height: 100vh;
-  z-index: 101;
+  z-index: 10;
   box-shadow: 3px 10px 50px 2px rgba(0, 0, 0, 0.9);
   background-color: #fcbf49;
 

@@ -39,32 +39,32 @@ const Footer = () => {
       <h2 className='head-text'>Have a coffee chat with me</h2>
 
       <div className='app__footer-cards'>
-        <motion.div
-          className='app__footer-card'
-          whileHover={{
-            scale: 0.98,
-            boxShadow: 'inset 0 0 10px 2px #702a18'
-          }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: 'spring', stiffness: 100 }}>
-          <img src={images.email} alt='email' />
-          <a href='mailto:cody.sanders.developer@gmail.com' className='p-text'>
+        <a href='mailto:cody.sanders.developer@gmail.com' className='p-text'>
+          <motion.div
+            className='app__footer-card'
+            whileHover={{
+              scale: 0.98,
+              boxShadow: 'inset 0 0 10px 2px #702a18'
+            }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 100 }}>
+            <img src={images.email} alt='email' />
             cody.sanders.developer@gmail.com
-          </a>
-        </motion.div>
-        <motion.div
-          className='app__footer-card'
-          whileHover={{
-            scale: 0.98,
-            boxShadow: 'inset 0 0 10px 2px #6a3e1a'
-          }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: 'spring', stiffness: 100 }}>
-          <img src={images.mobile} alt='mobile' />
-          <a href='tel: +1 (727)871-8709' className='p-text'>
+          </motion.div>
+        </a>
+        <a href='tel: +1 (727)871-8709' className='p-text'>
+          <motion.div
+            className='app__footer-card'
+            whileHover={{
+              scale: 0.98,
+              boxShadow: 'inset 0 0 10px 2px #6a3e1a'
+            }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 100 }}>
+            <img src={images.mobile} alt='mobile' />
             (727) 871-8709
-          </a>
-        </motion.div>
+          </motion.div>
+        </a>
       </div>
 
       <div className='app__footer-form app__flex'>

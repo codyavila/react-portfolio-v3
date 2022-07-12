@@ -26,8 +26,8 @@ const About = () => {
         {about.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 160, damping: 20 }}
             className='app__profile-item'
             key={about.title + index}>
             <img src={urlFor(about.imgUrl)} alt={about.title} />

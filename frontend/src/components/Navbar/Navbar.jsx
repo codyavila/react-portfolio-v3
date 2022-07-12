@@ -81,7 +81,7 @@ const Navbar = () => {
             className='app__flex p-text'
             whileHover={{ y: -3, scale: 1.02 }}
             whileTap={{ scale: 0.94 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 5 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 12 }}
             key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -105,6 +105,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               variants={itemVariants}
+              key={`link-${item}`}
               href={`#${item}`}>
               {item}
             </motion.a>
