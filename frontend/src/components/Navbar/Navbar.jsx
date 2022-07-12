@@ -19,12 +19,25 @@ const Navbar = () => {
       x: 0,
       transition: {
         type: 'spring',
-        stiffness: 50,
+
+        stiffness: 200,
+        damping: 20,
         staggerChildren: 0.17,
         staggerDirection: 1
       }
     },
-    closed: { opacity: 0, x: '100%' }
+    closed: {
+      opacity: 0,
+      x: '100%',
+      transition: {
+        delay: 0.5,
+        type: 'spring',
+        stiffness: 200,
+        damping: 20,
+        staggerChildren: 0.06,
+        staggerDirection: -1
+      }
+    }
   }
 
   const itemVariants = {
@@ -58,13 +71,17 @@ const Navbar = () => {
         dragElastic={0.5}
         whileHover={{ scale: 1.03, rotate: 1.2 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
-        <img src={images.logo} alt='logo' draggable='false' />
+        <a href='#home' draggable='false'>
+          <img src={images.logo} alt='logo' draggable='false' />
+        </a>
       </motion.div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <motion.li
             className='app__flex p-text'
-            whileHover={{ y: -3 }}
+            whileHover={{ y: -3, scale: 1.02 }}
+            whileTap={{ scale: 0.94 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 5 }}
             key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -81,7 +98,10 @@ const Navbar = () => {
         <motion.div variant={sideVariants} className='inner-nav'>
           {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
             <motion.a
-              onClick={() => setToggle((toggle) => !toggle)}
+              onClick={() => {
+                setOpen(!isOpen)
+                setToggle(!toggle)
+              }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               variants={itemVariants}
@@ -101,13 +121,16 @@ const Navbar = () => {
       <MenuButton
         className='toggle-button'
         isOpen={isOpen}
-        onClick={() => { setOpen(!isOpen); setToggle(!toggle)}}
-        strokeWidth='6'
-        color='#ff6666'
+        onClick={() => {
+          setOpen(!isOpen)
+          setToggle(!toggle)
+        }}
+        strokeWidth='5'
+        color='#d62828'
         lineProps={{ strokeLinecap: 'round' }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         width='24'
-        height='30'
+        height='19'
         style={menuButtonStyle}
       />
     </nav>

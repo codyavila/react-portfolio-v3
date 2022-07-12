@@ -12,9 +12,6 @@ const Skills = () => {
   const [skills, setSkills] = useState([])
   const [isOpen, setIsOpen] = useState([])
 
-  let toggleExperience = (experienceId) => {
-  }
-
   useEffect(() => {
     const query = '*[_type == "experiences"]'
     const skillsQuery = '*[_type == "skills"]'
@@ -30,11 +27,11 @@ const Skills = () => {
   return (
     <>
       <h2 className='head-text'>Skills & Experience</h2>
-      <p className='disclaimer-text'>*Tap position for more details</p>
+      <p className='disclaimer-text'>*Hover over position for more details</p>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
           {skills.map((skill, index) => (
-            <div className='app__skills-item app-flex' key={index}>
+            <div className='app__skills-item app-flex' key={skill.index}>
               <motion.div
                 whileHover={{
                   scale: 1.1,
@@ -70,9 +67,9 @@ const Skills = () => {
                           borderRadius: '1rem',
                           boxShadow: ' 0px 10px 30px rgba(0, 0, 0, 0.5)'
                         }}
-                        // onClick{}
+                        onClick={() => setIsOpen(!isOpen)}
                         className='card'
-                        key={index}>
+                        key={work.name}>
                         <motion.h2 layout='position'>{work.name}</motion.h2>
                         {isOpen && (
                           <motion.div
