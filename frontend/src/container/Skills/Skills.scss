@@ -39,7 +39,6 @@
 
   margin: 1rem;
 
-
   div {
     width: 90px;
     height: 90px;
@@ -133,43 +132,66 @@
   }
 }
 
-.skills-tooltip {
-  max-width: 300px !important;
-  background-color: #eae2b7 !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 5px !important;
-  padding: 1rem !important;
-  color: #003049 !important;
-  text-align: center !important;
-  line-height: 1.5 !important;
-  opacity: 1 !important;
+// .skills-tooltip {
+//   max-width: 300px !important;
+//   background-color: #eae2b7 !important;
+//   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+//   border-radius: 5px !important;
+//   padding: 1rem !important;
+//   color: #003049 !important;
+//   text-align: center !important;
+//   line-height: 1.5 !important;
+//   opacity: 1 !important;
 
-  @media screen and (min-width: 2000px) {
-    font-size: 1.75rem !important;
-    max-width: 500px !important;
-    line-height: 2 !important;
+//   @media screen and (min-width: 2000px) {
+//     font-size: 1.75rem !important;
+//     max-width: 500px !important;
+//     line-height: 2 !important;
+//   }
+// }
+
+.disclaimer-text {
+  color: #eae2b7;
+  font-size: 11px;
+  margin-left: 28rem;
+
+  @media screen and (max-width: 900px) {
+    margin-left: 10rem;
+    font-size: 9px;
   }
 }
 
-.disclaimer-text {
-    color: #eae2b7;
-    font-size: 11px;
-    margin-left: 28rem;
+.card {
+  display: block;
+  background: #eae2b7;
+  color: #003049;
+  padding: 2rem 5rem;
+  text-align: center;
+  //   transition: height 1s linear;
+  @media screen and (max-width: 900px) {
+    padding: 2rem 4rem;
+  }
+
+  h2 {
+    display: inline-block;
 
     @media screen and (max-width: 900px) {
-        margin-left: 10rem;
-        font-size: 9px;
+      font-size: 18px;
     }
-}
+  }
 
-.card {
-    background: #eae2b7;
-    padding: 3rem 5rem;
-    color: #003049;
-
-    p {
-        padding-top: 1rem;
-        line-height: 150%;
-        color: #003049!important;
+  p {
+    padding-top: 1rem;
+    line-height: 150%;
+    color: #003049 !important;
+    @media screen and (max-width: 900px) {
+      font-size: 13px;
+      margin: -20px;
     }
+    @media screen and (max-width: 1200px) {
+      font-size: 13px;
+      margin: -20px;
+      padding-bottom: 1rem;
+    }
+  }
 }

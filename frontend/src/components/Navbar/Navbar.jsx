@@ -72,7 +72,8 @@ const Navbar = () => {
         whileHover={{ scale: 1.03, rotate: 1.2 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
         <a href='#home' draggable='false'>
-          <img src={images.logo} alt='logo' draggable='false' />
+          {/* <img src={images.logo} alt='logo' draggable='false' /> */}
+          <h1 className='name-logo'>Cody</h1>
         </a>
       </motion.div>
       <ul className='app__navbar-links'>

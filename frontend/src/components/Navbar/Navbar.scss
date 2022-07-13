@@ -21,6 +21,13 @@
   align-items: center;
   z-index: 20;
 
+  .name-logo {
+    color: white;
+    font-weight: 800;
+    text-transform: lowercase;
+    font-size: 40px;
+  }
+
   img {
     width: 90%;
     height: 90%;
@@ -72,12 +79,12 @@
         color: #d62828;
       }
     }
+    
     &:hover {
       div {
         background: #d62828;
       }
     }
-    
   }
   @media screen and (max-width: 1200px) {
     display: none;

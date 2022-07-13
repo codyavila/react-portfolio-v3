@@ -1,8 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const NavigationDots = ({ active }) => {
   return (
-    <div className='app__navigation'>
+    <motion.div className='app__navigation' layout>
       {['home', 'about', 'work', 'skills', 'contact'].map((item, index) => (
         <a
           href={`#${item}`}
@@ -11,7 +12,7 @@ const NavigationDots = ({ active }) => {
           style={active === item ? { backgroundColor: '#d62828' } : {}}
         />
       ))}
-    </div>
+    </motion.div>
   )
 }
 
