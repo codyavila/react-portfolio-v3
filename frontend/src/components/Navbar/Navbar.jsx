@@ -73,19 +73,36 @@ const Navbar = () => {
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
         <a href='#home' draggable='false'>
           {/* <img src={images.logo} alt='logo' draggable='false' /> */}
-          <h1 className='name-logo'>Cody</h1>
+          <div class='container'>
+            <div class='box'>
+              <div class='title'>
+                <span class='block'></span>
+                <h1>
+                  Cody Sanders<span></span>
+                </h1>
+              </div>
+
+              <div class='role'>
+                <div class='block'></div>
+                <p>A Fully Stacked Dev</p>
+              </div>
+            </div>
+          </div>
         </a>
       </motion.div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <motion.li
+            variants={variants}
             className='app__flex p-text'
             whileHover={{ y: -3, scale: 1.02 }}
             whileTap={{ scale: 0.94 }}
             transition={{ type: 'spring', stiffness: 200, damping: 12 }}
             key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <motion.a variants={itemVariants} href={`#${item}`}>
+              {item}
+            </motion.a>
           </motion.li>
         ))}
       </ul>
@@ -128,7 +145,7 @@ const Navbar = () => {
           setToggle(!toggle)
         }}
         strokeWidth='5'
-        color='#d62828'
+        color='#00332c'
         lineProps={{ strokeLinecap: 'round' }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         width='24'

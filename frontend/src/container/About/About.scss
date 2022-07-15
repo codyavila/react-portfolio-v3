@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+h2 {
+  color: #faae2b !important;
+}
+
 .app__profiles {
   display: flex;
   justify-content: center;
@@ -39,7 +43,7 @@
 }
 
 .about-title {
-  color: #eae2b7;
+  color: #fffffe !important;
   font-size: 15px;
   font-weight: 800;
 }

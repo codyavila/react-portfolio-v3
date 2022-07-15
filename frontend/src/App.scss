@@ -3,8 +3,12 @@
   font-family: var(--font-base);
 }
 
+.app__pinkbg {
+  background-color: #ffa8ba;
+}
+
 .app__whitebg {
-  background-color: #003049;
+  background-color: var(--secondary-color);
 }
 
 .app__primarybg {
@@ -56,7 +60,7 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: #fcbf49;
+  color: #00473e;
   text-transform: capitalize;
 
   span {
@@ -110,7 +114,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fcbf49;
+    background-color: #fffffe;
     margin: 0.25rem 0;
 
     display: flex;
@@ -122,7 +126,7 @@
     svg {
       width: 15px;
       height: 15px;
-      color: #003049;
+      color: #faae2b;
     }
 
     &:hover {
@@ -160,7 +164,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: #475d5b;
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;
