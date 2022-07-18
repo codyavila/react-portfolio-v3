@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { LayoutGroup, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const ExpCardClicked = (props) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +18,9 @@ const ExpCardClicked = (props) => {
         }}
         onClick={() => setIsOpen(!isOpen)}
         className='card'>
-        <motion.h2 items-center='true' layout='position'>{work.name}</motion.h2>
+        <motion.h2 items-center='true' layout='position'>
+          {work.name}
+        </motion.h2>
         {isOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <p className='p-text'>{work.company}</p>

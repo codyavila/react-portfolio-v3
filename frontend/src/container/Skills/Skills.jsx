@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { AnimateSharedLayout, LayoutGroup, motion } from 'framer-motion'
+import { LayoutGroup, motion } from 'framer-motion'
 import ExpCardYear from './ExpCardYear'
 
 import { AppWrap, MotionWrap } from '../../wrapper'

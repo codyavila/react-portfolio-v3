@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 import ExpCard from './ExpCard'
@@ -7,10 +7,7 @@ const ExpCardYear = (props) => {
   const experience = props.experience
 
   return (
-    <motion.div
-      layout
-      className='app__skills-exp'
-      key={experience.year}>
+    <motion.div layout className='app__skills-exp' key={experience.year}>
       {experience.map((experiences) => (
         <motion.div
           layout
