@@ -21,15 +21,14 @@
   .app__work-filter-item {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    background-color: #fff;
-    color: #003049;
+    background-color: #e07a5f;
+    color: #f4f1de !important;
     font-weight: 800;
     cursor: pointer;
     margin: 0.5rem;
 
     &:hover {
-      background-color: var(--secondary-color);
-      color: #fff;
+      color: #181818;
     }
 
     @media screen and (min-width: 2000px) {
@@ -39,7 +38,7 @@
   }
 
   .item-active {
-    background-color: var(--secondary-color);
+    background-color: #3d405b;
     color: #fff;
   }
 }
@@ -57,8 +56,8 @@
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
+    background-color: #e07a5f;
+    color: #fffffe;
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -104,7 +103,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 
   border-radius: 0.5rem;
   opacity: 0;
@@ -113,8 +112,8 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: #e07a5f;
+    color: #f4f1de;
 
     margin: 1rem;
     font-family: var(--font-base);
@@ -124,7 +123,7 @@
     svg {
       width: 50%;
       height: 50%;
-      color: var(--white-color);
+      color: #f2eef5;
     }
   }
 }
@@ -136,6 +135,7 @@
   flex-direction: column;
 
   h4 {
+    color: #f4f1de;
     margin-top: 1rem;
     line-height: 1.5;
   }
@@ -145,13 +145,14 @@
 
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #81b29a;
+    color: #fffffe;
     top: -25px;
   }
 }
 
 .work-text {
-  color: #003049;
+  color: #f4f1de;
   font-size: 0.8rem;
   text-align: left;
   line-height: 1.5;

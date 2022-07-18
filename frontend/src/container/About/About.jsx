@@ -15,9 +15,8 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        <span>Great Development</span>, That Comes With
-        <br />
-        <span> Great Responsibility</span>
+        <span>and if you are interested, </span> <br /> some other stuff
+        <span> About Me</span>
         <br />
         <p className='fun-h5'>Now Thats a Package</p>
       </h2>
@@ -44,4 +43,4 @@ const About = () => {
   )
 }
 
-export default AppWrap(MotionWrap(About, 'app__about'), 'about', 'app__primarybg')
+export default AppWrap(MotionWrap(About, 'app__about'), 'about', 'app__blackbg')

@@ -41,14 +41,12 @@ const Header = () => {
           </motion.p>
 
           <div className='app__header-cards'>
-            <a
-              href='linkedin.com'
-              className='p-text'>
+            <a href='linkedin.com' className='p-text'>
               <motion.div
                 className='app__header-card-linkedin'
                 whileHover={{
                   scale: 0.98,
-                  boxShadow: 'inset 0 0 10px 2px #702a18'
+                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'
                 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 100 }}>
@@ -60,7 +58,8 @@ const Header = () => {
                 className='app__header-card-github'
                 whileHover={{
                   scale: 0.98,
-                  boxShadow: 'inset 0 0 10px 2px #6a3e1a'
+                  transition: { type: 'spring', stiffness: 150, damping: 10 },
+                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'
                 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 100 }}>

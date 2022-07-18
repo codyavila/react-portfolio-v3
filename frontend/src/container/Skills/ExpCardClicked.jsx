@@ -14,11 +14,11 @@ const ExpCardClicked = (props) => {
         transition={{ type: 'spring', stiffness: 200, damping: 20 }}
         style={{
           borderRadius: '1rem',
-          boxShadow: ' 0px 10px 30px rgba(0, 0, 0, 0.5)'
+          boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.2)'
         }}
         onClick={() => setIsOpen(!isOpen)}
         className='card'>
-        <motion.h2 items-center layout='position'>{work.name}</motion.h2>
+        <motion.h2 items-center='true' layout='position'>{work.name}</motion.h2>
         {isOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <p className='p-text'>{work.company}</p>

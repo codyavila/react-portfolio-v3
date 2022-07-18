@@ -8,6 +8,7 @@ a {
   text-decoration: none;
   font-weight: 500;
 }
+
 .app__footer-cards {
   width: 60%;
   display: flex;
@@ -27,7 +28,7 @@ a {
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #e76f51;
+    background-color: #50c4cf;
 
     img {
       width: 40px;
@@ -51,7 +52,8 @@ a {
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f4a261;
+  background-color: #50c4cf;
+  color: #181818;
 }
 
 .app__footer-form {
@@ -65,7 +67,7 @@ a {
     margin: 0.75rem 0;
     border-radius: 10px;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: #2e2e2e;
 
     input,
     textarea {
@@ -73,10 +75,10 @@ a {
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      background-color: #2e2e2e;
 
       font-family: var(--font-base);
-      color: var(--secondary-color);
+      color: #fffffe !important;
       outline: none;
     }
 
@@ -89,7 +91,7 @@ a {
     padding: 1rem 2rem;
     border-radius: 10px;
     border: none;
-    background-color: var(--secondary-color);
+    background-color: #50c4cf;
 
     font-weight: 500;
     text-align: center;

@@ -43,7 +43,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #fffffe;
+    background-color: #f4f1de !important;
 
     img {
       width: 3rem;
@@ -63,6 +63,7 @@
   p {
     font-weight: 500;
     margin-top: 0.5rem;
+    color: #f4f1de;
   }
 
   @media screen and (min-width: 2000px) {
@@ -108,12 +109,12 @@
 
     h4 {
       font-weight: 500;
-      color: #fffffe;
+      color: #fbdd74;
     }
 
     p {
       font-weight: 400;
-      color: #f2f7f5;
+      color: #4fc4cf;
       margin-top: 5px;
     }
   }
@@ -124,7 +125,7 @@
 
   p {
     font-weight: 800;
-    color: #fa5246;
+    color: #181818;
   }
 
   @media screen and (max-width: 450px) {
@@ -151,7 +152,7 @@
 // }
 
 .disclaimer-text {
-  color: #f2f7f5;
+  color: #3d405b;
   font-size: 11px;
   margin-left: 28rem;
 
@@ -163,8 +164,8 @@
 
 .card {
   display: block;
-  background: #f2f7f5;
-  color: #00473e;
+  background: #81b29a;
+  color: #f4f1de;
   padding: 2rem 5rem;
   text-align: center;
   //   transition: height 1s linear;
@@ -185,7 +186,7 @@
     font-size: 14px;
     padding-top: 1rem;
     line-height: 150%;
-    color: #475d5b !important;
+    color: #3d405b !important;
     @media screen and (max-width: 900px) {
       font-size: 13px;
       margin: -20px;

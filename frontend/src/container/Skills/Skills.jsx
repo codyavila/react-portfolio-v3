@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { AnimateSharedLayout, motion } from 'framer-motion'
+import { AnimateSharedLayout, LayoutGroup, motion } from 'framer-motion'
 import ExpCardYear from './ExpCardYear'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
@@ -25,10 +25,12 @@ const Skills = () => {
   }, [])
   return (
     <>
-      <AnimateSharedLayout>
-        <motion.h2 layout className='head-text'>Skills & Experience</motion.h2>
+      <LayoutGroup>
+        <motion.h2 layout className='head-text'>
+          Skills & Experience
+        </motion.h2>
         <motion.p layout className='disclaimer-text'>
-          *Hover over position for more details
+          *Tap on position for more details
         </motion.p>
         <motion.div className='app__skills-container'>
           <motion.div className='app__skills-list'>
@@ -40,16 +42,19 @@ const Skills = () => {
                 <motion.div
                   whileHover={{
                     scale: 1.1,
-                    boxShadow: '0 0 10px 3px #03152C'
+                    boxShadow: '0px 10x 15px rgba(0, 0, 0, 0.2)'
                   }}
                   whileTap={{
                     scale: 0.98,
-                    boxShadow: '0 0 5px 2px #03152C'
+                    boxShadow: '0px 10px 15px rgba(0, 0, 0, 0.2)'
                   }}
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ type: 'spring', stiffness: 100 }}
                   className='app__flex'
-                  style={{ backgroundColor: skill.bgColor }}>
+                  style={{
+                    backgroundColor: skill.bgColor,
+                    boxShadow: '0px 10px 10px rgba(0, 0, 0, 0.2)'
+                  }}>
                   <img src={urlFor(skill.icon)} alt={skill.name} />
                 </motion.div>
                 <p className='p-text'>{skill.name}</p>
@@ -61,7 +66,7 @@ const Skills = () => {
             experienceWorks={experience.works}
           />
         </motion.div>
-      </AnimateSharedLayout>
+      </LayoutGroup>
     </>
   )
 }
@@ -69,5 +74,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
-  'app__primarybg'
+  'app__purplebg'
 )

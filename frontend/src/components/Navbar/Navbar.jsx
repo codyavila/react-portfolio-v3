@@ -73,17 +73,17 @@ const Navbar = () => {
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
         <a href='#home' draggable='false'>
           {/* <img src={images.logo} alt='logo' draggable='false' /> */}
-          <div class='container'>
-            <div class='box'>
-              <div class='title'>
-                <span class='block'></span>
+          <div className='container'>
+            <div className='box'>
+              <div className='title'>
+                <span className='block'></span>
                 <h1>
                   Cody Sanders<span></span>
                 </h1>
               </div>
 
-              <div class='role'>
-                <div class='block'></div>
+              <div className='role'>
+                <div className='block'></div>
                 <p>A Fully Stacked Dev</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ const Navbar = () => {
           setToggle(!toggle)
         }}
         strokeWidth='5'
-        color='#00332c'
+        color='#181818'
         lineProps={{ strokeLinecap: 'round' }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         width='24'

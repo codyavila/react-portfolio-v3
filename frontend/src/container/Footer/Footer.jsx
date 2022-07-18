@@ -44,7 +44,7 @@ const Footer = () => {
             className='app__footer-card'
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 10px 2px #702a18'
+              boxShadow: 'inset 0 0 10px 2px #2e2e2e'
             }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 100 }}>
@@ -57,7 +57,7 @@ const Footer = () => {
             className='app__footer-card'
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 10px 2px #6a3e1a'
+              boxShadow: 'inset 0 0 10px 2px #2e2e2e'
             }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 100 }}>
@@ -69,7 +69,7 @@ const Footer = () => {
 
       <div className='app__footer-form app__flex'>
         <motion.div
-          whileHover={{ scale: 0.98, boxShadow: '0 0 20px 5px #0a1940' }}
+          whileHover={{ scale: 0.98 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}
           className='app__flex'>
@@ -84,7 +84,7 @@ const Footer = () => {
         </motion.div>
         <motion.div
           className='app__flex'
-          whileHover={{ scale: 0.98, boxShadow: '0 0 20px 5px #0a1940' }}
+          whileHover={{ scale: 0.98 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}>
           <input
@@ -97,7 +97,7 @@ const Footer = () => {
           />
         </motion.div>
         <motion.div
-          whileHover={{ scale: 0.98, boxShadow: '0 0 20px 5px #0a1940' }}
+          whileHover={{ scale: 0.98 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}>
           <textarea
@@ -113,7 +113,7 @@ const Footer = () => {
           <motion.button
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 7px 1px #6a3e1a'
+              boxShadow: 'inset 0 0 7px 1px #2e2e2e'
             }}
             whileTap={{ scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 100 }}
@@ -126,7 +126,7 @@ const Footer = () => {
           <motion.button
             whileHover={{
               scale: 0.95,
-              boxShadow: 'inset 0 0 6px 2px #6a3e1a'
+              boxShadow: 'inset 0 0 6px 2px #2e2e2e'
             }}
             whileTap={{ scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 160 }}
@@ -144,5 +144,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__pinkbg'
+  'app__blackbg'
 )
