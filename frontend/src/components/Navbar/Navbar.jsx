@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MenuButton } from './MenuButton.tsx'
 
-import { images } from '../../constants'
 import './Navbar.scss'
 
 const Navbar = () => {
@@ -72,7 +71,6 @@ const Navbar = () => {
         whileHover={{ scale: 1.03, rotate: 1.2 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
         <a href='#home' draggable='false'>
-          {/* <img src={images.logo} alt='logo' draggable='false' /> */}
           <div className='container'>
             <div className='box'>
               <div className='title'>
@@ -130,13 +128,6 @@ const Navbar = () => {
           ))}
         </motion.div>
       </motion.nav>
-      {/* <motion.button
-        className='toggle'
-        onClick={() => setToggle((toggle) => !toggle)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}>
-        toggle button
-      </motion.button> */}
       <MenuButton
         className='toggle-button'
         isOpen={isOpen}
