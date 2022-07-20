@@ -29,6 +29,7 @@ a {
     border-radius: 10px;
     cursor: pointer;
     background-color: #e07a5f;
+    color: #f4f1de !important;
 
     img {
       width: 40px;
@@ -39,7 +40,6 @@ a {
     p {
       font-weight: 600;
     }
-
 
     @media screen and (max-width: 450px) {
       width: 100%;
@@ -78,7 +78,7 @@ a {
       background-color: #f4f1de;
 
       font-family: var(--font-base);
-      color: #fffffe;
+      // color: #fffffe;
       outline: none;
     }
 
@@ -100,11 +100,14 @@ a {
     margin: 2rem 0 0 0;
     font-family: var(--font-base);
     cursor: pointer;
-
   }
 
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: 1rem 0;
+  }
+
+  .button-sent {
+    cursor: default;
   }
 }

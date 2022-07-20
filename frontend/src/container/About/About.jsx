@@ -14,11 +14,11 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>
-        <span>and if you are interested, </span> <br /> some other stuff
-        <span> About Me</span>
-        <br />
-        <p className='fun-h5'>Now Thats a Package</p>
+      <h2 className='head-text about-head'>
+       <span> So You Want to </span> Know More?
+        {/* <br /> */}
+        {/* <span>About me</span> */}
+        {/* <p className='fun-h5'>Now Thats a Package</p> */}
       </h2>
 
       <div className='app__profiles'>

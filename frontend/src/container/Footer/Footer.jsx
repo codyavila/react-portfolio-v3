@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper'
@@ -12,6 +13,30 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    emailjs
+      .sendForm(
+        'service_pjmfyeq',
+        'template_szapo02',
+        form.current,
+        '8lra3CMMTMLjXT17X'
+      )
+      .then(
+        (result) => {
+          setLoading(false)
+          setIsFormSubmitted(true)
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+  }
   const { name, email, message } = formData
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -19,20 +44,20 @@ const Footer = () => {
     setFormData({ ...FormData, [name]: value })
   }
 
-  const handleSubmit = () => {
-    setLoading(true)
+  // const handleSubmit = () => {
+  //   setLoading(true)
 
-    const contact = {
-      _type: 'contact',
-      name: name,
-      email: email,
-      message: message
-    }
-    client.create(contact).then(() => {
-      setLoading(false)
-      setIsFormSubmitted(true)
-    })
-  }
+  //   const contact = {
+  //     _type: 'contact',
+  //     name: name,
+  //     email: email,
+  //     message: message
+  //   }
+  //   client.create(contact).then(() => {
+  //     setLoading(false)
+  //     setIsFormSubmitted(true)
+  //   })
+  // }
 
   return (
     <>
@@ -44,10 +69,10 @@ const Footer = () => {
             className='app__footer-card'
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 10px 2px #2e2e2e'
+              boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)'
             }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 100 }}>
+            transition={{ type: 'spring', stiffness: 200 }}>
             <img src={images.email} alt='email' />
             cody.sanders.developer@gmail.com
           </motion.div>
@@ -57,19 +82,25 @@ const Footer = () => {
             className='app__footer-card'
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 10px 2px #2e2e2e'
+              boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)'
             }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 100 }}>
+            transition={{ type: 'spring', stiffness: 200 }}>
             <img src={images.mobile} alt='mobile' />
             (727) 871-8709
           </motion.div>
         </a>
       </div>
 
-      <div className='app__footer-form app__flex'>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className='app__footer-form app__flex'>
         <motion.div
-          whileHover={{ scale: 0.98 }}
+          whileHover={{
+            scale: 0.98,
+            boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
+          }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}
           className='app__flex'>
@@ -84,7 +115,10 @@ const Footer = () => {
         </motion.div>
         <motion.div
           className='app__flex'
-          whileHover={{ scale: 0.98 }}
+          whileHover={{
+            scale: 0.98,
+            boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
+          }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}>
           <input
@@ -97,46 +131,44 @@ const Footer = () => {
           />
         </motion.div>
         <motion.div
-          whileHover={{ scale: 0.98 }}
+          whileHover={{
+            scale: 0.98,
+            boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
+          }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: 'spring', stiffness: 140 }}>
           <textarea
             className='p-text'
             placeholder='Your Message'
-            value='Your Message'
-            name={message}
+            value={message}
+            name='message'
             onChange={handleChange}
           />
         </motion.div>
-
+        {/* <motion.button>
+          <input type='submit' value='Send' />
+        </motion.button>{' '} */}
         {!isFormSubmitted ? (
           <motion.button
             whileHover={{
               scale: 0.98,
-              boxShadow: 'inset 0 0 7px 1px #2e2e2e'
+              boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)'
             }}
             whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 100 }}
-            type='button'
-            className='p-text'
-            onClick={handleSubmit}>
+            transition={{ type: 'spring', stiffness: 200 }}
+            type='submit'
+            value='Send'
+            className='p-text'>
             {loading ? 'Sending' : 'Send Message'}
           </motion.button>
         ) : (
           <motion.button
-            whileHover={{
-              scale: 0.95,
-              boxShadow: 'inset 0 0 6px 2px #2e2e2e'
-            }}
-            whileTap={{ scale: 0.85 }}
-            transition={{ type: 'spring', stiffness: 160 }}
             type='button'
-            className='p-text'
-            onClick={handleSubmit}>
+            className='p-text button-sent'>
             Sent. Talk to you soon!
           </motion.button>
         )}
-      </div>
+      </form>
     </>
   )
 }

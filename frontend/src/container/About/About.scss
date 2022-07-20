@@ -4,6 +4,14 @@
   flex-direction: column;
 }
 
+.about-head {
+  color:#f2cc8f !important;
+
+  span {
+    color:#f4f1de !important;
+  }
+}
+
 .app__profiles {
   display: flex;
   justify-content: center;
