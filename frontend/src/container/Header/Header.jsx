@@ -13,7 +13,9 @@ const Header = () => {
       <motion.div className='app__header-intro'>
         <motion.h2>Hello! I'm Cody, a developer of sorts.</motion.h2>
         <motion.p>
-          Frontend developer, backend capable. I always start with that because while I am a fullstack developer, I have an obsession for building user-friendly, simple, and delightful websites for all users.
+          Frontend developer, backend capable. I always start with that because
+          while I am a fullstack developer, I have an obsession for building
+          user-friendly, simple, and delightful websites for all users.
         </motion.p>
         <motion.p>
           I was a student at General Assembly where I spent 420 hours learning

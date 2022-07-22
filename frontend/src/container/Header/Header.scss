@@ -25,15 +25,17 @@
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
+    flex-direction: row;
   }
 
   @media screen and (max-width: 1200px) {
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
   }
 
   @media screen and (max-width: 900px) {
-    padding: 2rem 1rem;
-    flex-direction: row-reverse;
+    // padding: 2rem 1rem;
+    flex-direction: row;
+    flex-wrap: flex;
   }
 }
 
@@ -51,16 +53,21 @@
   @media screen and (max-width: 900px) {
     text-align: center;
     flex-direction: column;
-    width: 100%;
     padding-top: 5rem;
     margin-left: 0;
   }
+  
   @media screen and (max-width: 1200px) {
     text-align: left;
     flex-direction: column;
     width: 100%;
     padding-top: 5rem;
     margin-left: 0;
+  }
+
+    @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+    flex-direction: column;
   }
 
   h2 {
@@ -78,9 +85,6 @@
 
     @media screen and (max-width: 900px) {
       display: none;
-    }
-    @media screen and (max-width: 1200px) {
-      font-size: 18px;
     }
   }
 
@@ -109,8 +113,6 @@
       color: #fffffe;
 
       @media screen and (max-width: 900px) {
-        width: 50%;
-        min-width: 100px;
         font-size: 17px;
         margin-right: auto;
         right: 20px;
@@ -135,8 +137,6 @@
       border: solid 1px #e3e3e3;
 
       @media screen and (max-width: 900px) {
-        width: 50%;
-        min-width: 100px;
         font-size: 17px;
         margin-right: auto;
         left: 20px;
@@ -168,14 +168,12 @@
     border-radius: 30px;
 
     @media screen and (max-width: 900px) {
-      position: relative;
-      width: 81%;
+      flex: 1;
+      width: 50%;
     }
 
     @media screen and (max-width: 1200px) {
-      margin-right: 30%;
-      width: 80%;
-      margin-bottom: 30rem;
+      width: 60%;
     }
   }
 
