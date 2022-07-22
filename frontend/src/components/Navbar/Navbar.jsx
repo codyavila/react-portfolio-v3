@@ -63,13 +63,7 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <motion.div
-        className='app__navbar-logo'
-        drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        dragElastic={0.5}
-        whileHover={{ scale: 1.03, rotate: 1.2 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
+      <motion.div className='app__navbar-logo'>
         <a href='#home' draggable='false'>
           <div className='container'>
             <div className='box'>

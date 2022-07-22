@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <h2 className='head-text about-head'>
-       <span> So You Want to </span> Know More?
+       <span> More </span> About Me.
         {/* <br /> */}
         {/* <span>About me</span> */}
         {/* <p className='fun-h5'>Now Thats a Package</p> */}
