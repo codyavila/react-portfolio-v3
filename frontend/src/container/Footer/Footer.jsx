@@ -74,7 +74,7 @@ const Footer = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 200 }}>
             <img src={images.email} alt='email' />
-            cody.sanders.developer@gmail.com
+            <p>cody.sanders.developer@gmail.com</p>
           </motion.div>
         </a>
         <a href='tel: +1 (727)871-8709' className='p-text'>
@@ -86,8 +86,8 @@ const Footer = () => {
             }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 200 }}>
-            <img src={images.mobile} alt='mobile' />
-            (727) 871-8709
+            <img className='phone-img' src={images.mobile} alt='mobile' />
+            <p>(727) 871-8709</p>
           </motion.div>
         </a>
       </div>
@@ -162,9 +162,7 @@ const Footer = () => {
             {loading ? 'Sending' : 'Send Message'}
           </motion.button>
         ) : (
-          <motion.button
-            type='button'
-            className='p-text button-sent'>
+          <motion.button type='button' className='p-text button-sent'>
             Sent. Talk to you soon!
           </motion.button>
         )}

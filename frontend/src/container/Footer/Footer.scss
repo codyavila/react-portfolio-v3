@@ -18,12 +18,11 @@ a {
   margin: 4rem 2rem 2rem;
 
   .app__footer-card {
-    min-width: 290px;
+    min-width: 310px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-
+    justify-content: center;
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 10px;
@@ -34,13 +33,17 @@ a {
     img {
       width: 40px;
       height: 40px;
-      margin: 0 0.7rem;
+      margin-right: 1rem;
+    }
+
+    .phone-img {
+      margin-right: 9.2rem;
     }
 
     p {
+      display: flex;
       font-weight: 600;
     }
-
     @media screen and (max-width: 450px) {
       width: 100%;
     }
