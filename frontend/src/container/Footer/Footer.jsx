@@ -87,7 +87,7 @@ const Footer = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 200 }}>
             <img className='phone-img' src={images.mobile} alt='mobile' />
-            <p>(727) 871-8709</p>
+            <p className='phone-num'>(727) 871-8709</p>
           </motion.div>
         </a>
       </div>
