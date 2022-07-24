@@ -26,7 +26,8 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 160, damping: 20 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 150, damping: 15 }}
             className='app__profile-item'
             key={about.title + index}>
             <img src={urlFor(about.imgUrl)} alt={about.title} />

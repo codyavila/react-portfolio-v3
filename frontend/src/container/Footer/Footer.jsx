@@ -100,7 +100,7 @@ const Footer = () => {
         className='app__footer-form app__flex'>
         <motion.div
           whileHover={{
-            scale: 0.98,
+            scale: 0.99,
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
           }}
           whileTap={{ scale: 0.97 }}
@@ -118,7 +118,7 @@ const Footer = () => {
         <motion.div
           className='app__flex'
           whileHover={{
-            scale: 0.98,
+            scale: 0.99,
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
           }}
           whileTap={{ scale: 0.97 }}
@@ -134,7 +134,7 @@ const Footer = () => {
         </motion.div>
         <motion.div
           whileHover={{
-            scale: 0.98,
+            scale: 0.99,
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)'
           }}
           whileTap={{ scale: 0.97 }}
