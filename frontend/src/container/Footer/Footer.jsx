@@ -61,7 +61,9 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className='head-text'>Have a coffee chat with me</h2>
+      <h2 className='head-text'>
+        Let's get in touch and grab a coffee!
+      </h2>
 
       <div className='app__footer-cards'>
         <a href='mailto:cody.sanders.developer@gmail.com' className='p-text'>
