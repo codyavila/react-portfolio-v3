@@ -70,7 +70,7 @@ const Navbar = () => {
               <div className='title'>
                 <span className='block'></span>
                 <h1>
-                  Cody Sanders<span></span>
+                  Cody Avila<span></span>
                 </h1>
               </div>
 
