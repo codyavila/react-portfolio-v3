@@ -32,8 +32,8 @@ const Skills = () => {
         <motion.p layout className='disclaimer-text'>
           *Tap on position for more details
         </motion.p>
-        <motion.div className='app__skills-container'>
-          <motion.div className='app__skills-list'>
+        <motion.div layout className='app__skills-container'>
+          <motion.div layout className='app__skills-list'>
             {skills.map((skill) => (
               <motion.div
                 layout
@@ -62,6 +62,7 @@ const Skills = () => {
             ))}
           </motion.div>
           <ExpCardYear
+            layout
             experience={experience}
             experienceWorks={experience.works}
           />

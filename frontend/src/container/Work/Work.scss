@@ -59,10 +59,9 @@
 
   .app__work-item {
     width: 270px;
-    height: 82%;
     flex-direction: column;
 
-    margin: 2rem;
+    margin: 2rem 4rem;
     padding: 1rem;
     border-radius: 1.5rem;
     background-color: #f9f7e9;
@@ -74,8 +73,8 @@
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     }
     @media screen and (min-width: 2000px) {
-      width: 470px;
-      padding: 1.25rem;
+      width: 400px;
+      padding: 1.25rem ;
       border-radius: 35px;
     }
 
@@ -108,6 +107,8 @@
 
     border-radius: 0.5rem;
     object-fit: cover;
+
+    image-rendering: auto;
   }
   @media screen and (min-width: 2000px) {
     height: 350px;

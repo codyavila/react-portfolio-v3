@@ -108,6 +108,7 @@
       font-weight: 1;
 
       margin: 1rem;
+      margin-left: 0;
       padding: 10px 42px;
       border-radius: 5px;
       cursor: pointer;
@@ -171,6 +172,8 @@
     object-fit: contain;
     z-index: 1;
     border-radius: 30px;
+
+    image-rendering: smooth;
 
     @media screen and (max-width: 900px) {
       flex: 1;

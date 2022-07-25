@@ -7,7 +7,7 @@ const ExpCard = (props) => {
   console.log(experience)
 
   return (
-    <motion.div className='app__skills-exp-works'>
+    <motion.div layout className='app__skills-exp-works'>
       {experience.works.map((work) => (
         <ExpCardClicked key={work.name} work={work} />
       ))}

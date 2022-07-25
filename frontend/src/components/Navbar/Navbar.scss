@@ -21,7 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   z-index: 3;
-  padding: 0 7vw;
+  padding: 0 7rem;
 
   .name-logo {
     color: #00473e;
@@ -30,6 +30,10 @@
     font-size: 40px;
     text-align: right;
     margin: 5rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0 2vw;
   }
 }
 
@@ -46,7 +50,8 @@
 }
 
 .app__navbar-links {
-  padding-left: 20vw;
+  padding-left: 28vw;
+  right: 30px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -88,8 +93,12 @@
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     display: none;
+  }
+  @media screen and (min-width: 2400px) {
+    padding-left: 0;
+    padding-right: 20rem;
   }
 }
 
@@ -128,7 +137,7 @@
       }
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1300px) {
     display: none;
   }
   @media screen and (max-width: 700px) {
@@ -141,7 +150,7 @@
 .toggle-button {
   z-index: 101;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1300px) {
     display: none;
   }
 }
