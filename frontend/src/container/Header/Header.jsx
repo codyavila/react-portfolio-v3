@@ -20,7 +20,7 @@ const Header = () => {
           captivating web apps for all users while also being able to hold my own with back-end environments.
         </motion.p>
         <motion.p>
-          As a software engineering student at General Assembly, I compiled 420
+          As a software engineering student at General Assembly, I compiled 420+
           hours of training in the fundamentals of front-end and back-end development. Upon
           graduation, I joined General Assembly as a teaching assistant where I
           assist students in learning, understanding, and reinforcing software
