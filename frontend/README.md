@@ -1,4 +1,4 @@
-# Welcome to my portfolios github page!
+# Welcome! This is my Portfolio
 
 Author: Cody Sanders
 
