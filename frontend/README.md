@@ -4,7 +4,7 @@ Author: Cody Sanders
 
 This project for me was a deep dive into front-end design. Along the way, I also learned a lot about react hooks, sass, and UI/UX fundamentals. Many commits later, I'm super proud of this portfolio and excited to see where my next projects take me after all the front-end experience I learned.
 
-![Deployed Website]()
+![Deployed Website](https://www.cody-avila-portfolio.dev/)
 
 ## Picture of Project
 ![Portfolio](https://i.imgur.com/BU5ZSZE.png)
