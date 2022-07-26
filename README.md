@@ -1,4 +1,4 @@
-# Welcome! This is my Portfolio
+# Welcome to my Portfolio!
 
 Author: Cody Sanders
 
