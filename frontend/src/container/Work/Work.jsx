@@ -44,7 +44,7 @@ const Work = () => {
         My <span>Portfolio</span>
       </h2>
       <div className='app__work-filter'>
-        {['UI/UX', 'Web App', 'Mobile App', 'React', 'All'].map(
+        {['UI/UX', 'Web App', 'React', 'All'].map(
           (item, index) => (
             <motion.div
               key={index}

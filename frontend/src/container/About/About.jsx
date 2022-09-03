@@ -16,9 +16,6 @@ const About = () => {
     <>
       <h2 className='head-text about-head'>
        <span> More </span> About Me.
-        {/* <br /> */}
-        {/* <span>About me</span> */}
-        {/* <p className='fun-h5'>Now Thats a Package</p> */}
       </h2>
 
       <div className='app__profiles'>

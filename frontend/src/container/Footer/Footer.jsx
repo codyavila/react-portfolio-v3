@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser'
 
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { client } from '../../client'
 import { motion } from 'framer-motion'
 
 import './Footer.scss'
@@ -44,21 +43,6 @@ const Footer = () => {
     setFormData({ ...FormData, [name]: value })
   }
 
-  // const handleSubmit = () => {
-  //   setLoading(true)
-
-  //   const contact = {
-  //     _type: 'contact',
-  //     name: name,
-  //     email: email,
-  //     message: message
-  //   }
-  //   client.create(contact).then(() => {
-  //     setLoading(false)
-  //     setIsFormSubmitted(true)
-  //   })
-  // }
-
   return (
     <>
       <h2 className='head-text'>
@@ -76,7 +60,7 @@ const Footer = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 200 }}>
             <img src={images.email} alt='email' />
-            <p>cody.sanders.developer@gmail.com</p>
+            <p>cody.avila.r@gmail.com</p>
           </motion.div>
         </a>
         <a href='tel: +1 (727)871-8709' className='p-text'>
@@ -147,9 +131,6 @@ const Footer = () => {
             onChange={handleChange}
           />
         </motion.div>
-        {/* <motion.button>
-          <input type='submit' value='Send' />
-        </motion.button>{' '} */}
         {!isFormSubmitted ? (
           <motion.button
             whileHover={{
